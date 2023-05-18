@@ -15,8 +15,12 @@
   <div id="whole">
   <div class="intro vh-100">
     <div class="d-flex">
-<img class="mr-5 ml-2" src="images/logo.png">
-<ul class="nav ml-5 mt-3">
+<img src="images/logo.png">
+<div id="mobile-menu-icon" onclick="toggleMobileMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+<div id="mobile-menu-container">
+<ul class="nav ml-5 mt-3" id="navbar">
   <li class="nav-item">
     <a id="n" class="nav-link  h6" href="#">Home</a>
   </li>
@@ -33,9 +37,10 @@
     <a id="n" class="nav-link  h6" href="#Reviews">Reviews</a>
   </li>
   <li class="nav-item">
-    <a id="n" class="nav-link ml-5 h6" href="#Contact">Contact Us</a>
+    <a id="n" class="nav-link  h6" href="#Contact">Contact Us</a>
   </li>
 </ul>
+</div>
 <div style ="position:fixed; bottom: 2rem;right:2rem;">
   <a href="https://wa.me/917012921648?text=Welcome%20to%20StoryTellers%20Event%20Planner,How%20can%20we%20help%20you" class="btn btn-success btn-lg w-100" data-bs-toggle="tooltip" title="DM your queries" data-bs-placement="left" target="_blank">
   <i class="fa-brands fa-whatsapp"></i>
@@ -43,7 +48,7 @@
 </div>
 </div>
 <p class="ml-5 display-6" id="slogan1">You dream it..</p>
-<p class="display-6" id="slogan">We theme it..</p>
+<p class="display-6 ml-5" id="slogan">We theme it..</p>
 </div>
 <div class="mt-5" id="About">
 <h1 class="mb-3">About</h1>
@@ -60,7 +65,7 @@
 </div>
 </div>
 <div id="Services">
-  <h1 class="mt-5 mb-5 text-center">Our Services</h1>
+  <h1 class="mt-5 mb-5 text-center">Services</h1>
   <table class="table table-bordered table-dark align-middle">
     <tbody>
       <tr>
@@ -173,18 +178,18 @@
     <h1 class="mb-5 text-center">Contact Us</h1>
     <div id="contact-whole">
     <div id="contact-para" class="d-inline-block ml-4 mt-2">
-      <h5 class="mb-5 text-decoration-underline">Get in Touch</h6>
+      <h5 id="contact-us-heading" class="mb-5 text-decoration-underline">Get in Touch</h6>
       <p id="para">Get in touch with us! Feel free to drop us a note if you wish to learn more about any of our services, or if you simply want to say hi.</p>
- -   </div>
+    </div>
     <div id="Working-Hours" class="d-inline-block mt-2">
-      <h5 class="mb-5 text-decoration-underline">Working Hours</h6>
+      <h5 id="contact-us-heading" class="mb-5 text-decoration-underline">Working Hours</h6>
       <p id="para">Monday to Saturday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 09 AM-06 PM</p><br>
       <hr>
       <p id="para">Sunday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Closed</p><br>
       <hr>
     </div>
     <div id="follow-us" class="d-inline-block mt-2">
-      <h5 class="mb-5 text-decoration-underline">Follow Us</h6>
+      <h5 id="contact-us-heading" class="mb-5 text-decoration-underline">Follow Us</h6>
       <ul class="list-unstyled">
         <li>
           <i class="fab fa-instagram"></i> &nbsp;&nbsp;
@@ -208,7 +213,7 @@
       </ul>
     </div>
     <div id="send-us-a-message" class="d-inline-block mt-2">
-      <h5 class="mb-5 text-decoration-underline">Send Us a Message</h6>
+      <h5 id="contact-us-heading" class="mb-5 text-decoration-underline">Send Us a Message</h6>
         <p id="para">We will contact you to give you details you need.</p>
         <form onsubmit="E(); reset(); return false;">
           <div class="form-row">
@@ -232,6 +237,10 @@
 </div>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
+  function toggleMobileMenu() {
+  var navbar = document.getElementById("navbar");
+  navbar.style.display = navbar.style.display === "none" ? "block" : "none";
+}
 function E(){
 Email.send({
   Host : "smtp.elasticemail.com",

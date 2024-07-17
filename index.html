@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
   <div id="whole">
@@ -42,27 +46,52 @@
 </ul>
 </div>
 <div style ="position:fixed; bottom: 2rem;right:2rem;">
-  <a href="https://wa.me/917012921648?text=Welcome%20to%20StoryTellers%20Event%20Planner,How%20can%20we%20help%20you" class="btn btn-success btn-lg w-100" data-bs-toggle="tooltip" title="DM your queries" data-bs-placement="left" target="_blank">
+  <a href="https://wa.me/917012921648?text=Welcome%20to%20StoryTellers%20Event%20Planner,How%20can%20we%20help%20you" class="btn btn-success btn-lg w-100 zoom-out rounded-circle"  data-bs-toggle="tooltip" title="DM your queries" data-bs-placement="left" target="_blank">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 </div>
 </div>
-<p class="ml-5 display-6" id="slogan1">You dream it..</p>
-<p class="display-6 ml-5" id="slogan">We theme it..</p>
+<div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
 </div>
 <div class="mt-5" id="About">
-<h1 class="mb-3">About</h1>
-<div id="About-whole" class="d-flex">
-  <img id="About-image" src="images/About-img.jpg">
-  <p id="About-para"  class="mt-5 ml-3">StoryTellers is an is an Event Management, Wedding Planning, Decorating and Catering Company  
-    which is running in from 2000.We employ knowledgeable, experienced and friendly employees that go above and beyond to ensure 
-    that each event is unique and delivered to the highest possible standard.When it comes to arranging your wedding , we are your guide and you can expect us to 
-    manage your requirements and  appointments in the given timeline. … More than that, we allow you to experience the  traditional cultures in a new,  
-    and innovative manner.
-    <br>
-    <a href="#" id="contact-us-button" class="btn btn-dark btn-lg mt-2  btn-outline-light border border-1">Contact Us</a>
-    </p>
-</div>
+<h1 class="mb-3 text-center">About</h1>
+<div id="About-whole-laptop">
+  <div class="grid-item image1">
+    <img src="images/about3.jpg" class="img-fluid" alt="Image 1">
+  </div>
+  <div class="grid-item paragraph">
+    <p id="About-para" class="mt-5">StoryTellers is an is an Event Management, Wedding Planning, Decorating and Catering Company  
+      which is running in from 2000.We employ knowledgeable, experienced and friendly employees that go above and beyond to ensure 
+      that each event is unique and delivered to the highest possible standard.When it comes to arranging your wedding , we are your guide and you can expect us to 
+      manage your requirements and  appointments in the given timeline. … More than that, we allow you to experience the  traditional cultures in a new,  
+      and innovative manner.
+  </p>
+  </div>
+  <div class="grid-item image2">
+    <img src="images/about5.jpg" class="img-fluid" alt="Image 2">
+  </div>
+  <div class="grid-item image3">
+    <img src="images/about4.jpg" class="img-fluid" alt="Image 3">
+  </div>
+  <div class="grid-item image4">
+    <img src="images/about2.jpg" class="img-fluid" alt="Image 4">
+  </div>
+  <div class="grid-item image5">
+    <img src="images/about1.jpg" class="img-fluid" alt="Image 5">
+  </div>
+    </div>
+    <div id="About-whole-mobile" class="d-flex">
+      <img id="About-image" src="images/About-img.jpg"> 
+          <p id="About-para"  class="mt-5 ml-3">StoryTellers is an is an Event Management, Wedding Planning, Decorating and Catering Company  
+          which is running in from 2000.We employ knowledgeable, experienced and friendly employees that go above and beyond to ensure 
+          that each event is unique and delivered to the highest possible standard.When it comes to arranging your wedding , we are your guide and you can expect us to 
+          manage your requirements and  appointments in the given timeline. … More than that, we allow you to experience the  traditional cultures in a new,  
+          and innovative manner.
+          <br>
+          <a href="#" id="contact-us-button" class="btn btn-dark btn-lg mt-2  btn-outline-light border border-1">Contact Us</a>
+          </p>
+      </div>
+      
 </div>
 <div id="Services">
   <h1 class="mt-5 mb-5 text-center">Services</h1>
@@ -73,30 +102,39 @@
           <figure class="figure">
             <img id="services-wedding" src="images/services-wedding.png" class="figure-img img-fluid rounded" alt="Wedding ring image">
             <figcaption id="caption" class="figure-caption">Wedding</figcaption>
+            <p class="inside-figure">"Joyfully united over 100 couples, weaving love stories into life's beautiful tapestry."</p>
           </figure>
         </td>
         <td>
           <figure class="figure">
             <img id="services-engagement" src="images/services-engagement.png" class="figure-img img-fluid rounded" alt="Wedding image">
             <figcaption  id="caption" class="figure-caption">Engagement</figcaption>
-          </figure></td>
+            <p class="inside-figure">"Over 150 engagements, sparking countless journeys of love."</p>
+          </figure>
+        </td>
         <td><figure class="figure">
           <img id="services-birthday" src="images/services-birthday.jpg" class="figure-img img-fluid rounded" alt="engagement ring image">
           <figcaption id="caption" class="figure-caption">Birthday Parties</figcaption>
-        </figure></td>
+          <p class="inside-figure">"Celebrating over 250 birthdays, making each milestone a cherished memory."</p>
+        </figure>
+        
+      </td>
       </tr>
       <tr>
         <td><figure class="figure">
           <img id="services-themedparty" src="images/services-themedparty.jpg" class="figure-img img-fluid rounded" alt="themed party image">
           <figcaption id="caption" class="figure-caption">Themed Parties</figcaption>
+          <p class="inside-figure">"30 themed parties, each a canvas of joy and creativity."</p>
         </figure></td>
         <td><figure class="figure">
           <img id="services-exhibition" src="images/services-exhibition.jpg" class="figure-img img-fluid rounded" alt="exhibition image">
           <figcaption id="caption" class="figure-caption">Exhibitions</figcaption>
+          <p class="inside-figure">"15 exhibitions, where creativity thrives and stories come alive."</p>
         </figure></td>
         <td><figure class="figure">
           <img id="services-conference" src="images/services-conference.jpg" class="figure-img img-fluid rounded" alt="conference image">
           <figcaption id="caption" class="figure-caption">Conferences</figcaption>
+          <p class="inside-figure">"10+ conferences, sparking ideas, shaping futures."</p>
         </figure></td>
       </tr>
     </tbody>
@@ -149,6 +187,7 @@
 </div>
 <div id="Reviews" class="bg-light text-center">
   <h1 class="mt-5 mb-5 text-center">Our Happy Clients</h1>
+  <div class="review">
     <div id="review1" class="d-inline-block">
       "StoryTellers are the best for wedding planning, they understood our requirement and on the wedding day our wedding was organized perfectly as described everything
          was perfectly done and managed the designs was elegant and looked royal the whole wedding was organized so well that we were very happy. We will always recommend Special Events 
@@ -164,6 +203,7 @@
         <br>
         <br>
         <p>- Muhammed and Sarah</p>
+    </div>
     </div>
     <div id="review3" class="d-inline-block ">
       "It was our child’s tenth birthday and we wanted to plan a themed birthday party in Dubai but had less ideas about it as we had never tried any themed birthday 
@@ -237,6 +277,77 @@
 </div>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const gridItems = document.querySelectorAll('.grid-item');
+  
+  function checkScroll() {
+    gridItems.forEach(item => {
+      const itemTop = item.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (itemTop < windowHeight * 0.75) { 
+        item.classList.add('in-view');
+      }
+    });
+  }
+  
+  
+  window.addEventListener('scroll', checkScroll);
+  
+  
+  checkScroll();
+});
+
+consoleText(['You dream It...', 'We theme it'], 'text',['black']);
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
+
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
+    }
+  }, 120)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
+    }
+  }, 400)
+}
+
   function toggleMobileMenu() {
   var navbar = document.getElementById("navbar");
   navbar.style.display = navbar.style.display === "none" ? "block" : "none";

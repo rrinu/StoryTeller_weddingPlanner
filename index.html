@@ -46,7 +46,7 @@
 </ul>
 </div>
 <div style ="position:fixed; bottom: 2rem;right:2rem;">
-  <a href="https://wa.me/917012921648?text=Welcome%20to%20StoryTellers%20Event%20Planner,How%20can%20we%20help%20you" class="btn btn-success btn-lg w-100 zoom-out rounded-circle"  data-bs-toggle="tooltip" title="DM your queries" data-bs-placement="left" target="_blank">
+  <a href="https://wa.me/917012921648?text=Welcome%20to%20StoryTellers%20Event%20Planner,How%20can%20we%20help%20you" class="btn btn-success btn-lg w-100 zoom-out"  data-bs-toggle="tooltip" title="DM your queries" data-bs-placement="left" target="_blank">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 </div>
@@ -60,11 +60,9 @@
     <img src="images/about3.jpg" class="img-fluid" alt="Image 1">
   </div>
   <div class="grid-item paragraph">
-    <p id="About-para" class="mt-5">StoryTellers is an is an Event Management, Wedding Planning, Decorating and Catering Company  
-      which is running in from 2000.We employ knowledgeable, experienced and friendly employees that go above and beyond to ensure 
-      that each event is unique and delivered to the highest possible standard.When it comes to arranging your wedding , we are your guide and you can expect us to 
-      manage your requirements and  appointments in the given timeline. … More than that, we allow you to experience the  traditional cultures in a new,  
-      and innovative manner.
+    <p id="About-para" class="mt-5">StoryTellers is an Event Management, Wedding Planning, Decorating, and Catering company serving clients since 2000. Our knowledgeable and experienced team goes above and beyond to ensure each event is unique and delivered to the highest standard.
+
+      When planning your wedding, we are your trusted guide. We manage all your requirements and appointments within the given timeline, helping you experience traditional cultures in new, innovative ways.
   </p>
   </div>
   <div class="grid-item image2">
@@ -82,13 +80,11 @@
     </div>
     <div id="About-whole-mobile" class="d-flex">
       <img id="About-image" src="images/About-img.jpg"> 
-          <p id="About-para"  class="mt-5 ml-3">StoryTellers is an is an Event Management, Wedding Planning, Decorating and Catering Company  
-          which is running in from 2000.We employ knowledgeable, experienced and friendly employees that go above and beyond to ensure 
-          that each event is unique and delivered to the highest possible standard.When it comes to arranging your wedding , we are your guide and you can expect us to 
-          manage your requirements and  appointments in the given timeline. … More than that, we allow you to experience the  traditional cultures in a new,  
-          and innovative manner.
+          <p id="About-para"  class="mt-5 ml-3">StoryTellers is an Event Management, Wedding Planning, Decorating, and Catering company serving clients since 2000. Our knowledgeable and experienced team goes above and beyond to ensure each event is unique and delivered to the highest standard.
+
+            When planning your wedding, we are your trusted guide. We manage all your requirements and appointments within the given timeline, helping you experience traditional cultures in new, innovative ways.
           <br>
-          <a href="#" id="contact-us-button" class="btn btn-dark btn-lg mt-2  btn-outline-light border border-1">Contact Us</a>
+          <a href="#Contact" id="contact-us-button" class="btn btn-dark btn-lg mt-2  btn-outline-light border border-1">Contact Us</a>
           </p>
       </div>
       
@@ -187,33 +183,36 @@
 </div>
 <div id="Reviews" class="bg-light text-center">
   <h1 class="mt-5 mb-5 text-center">Our Happy Clients</h1>
+  <div class="review-container">
   <div class="review">
     <div id="review1" class="d-inline-block">
-      "StoryTellers are the best for wedding planning, they understood our requirement and on the wedding day our wedding was organized perfectly as described everything
-         was perfectly done and managed the designs was elegant and looked royal the whole wedding was organized so well that we were very happy. We will always recommend Special Events 
-        for wedding planning."
-        <br>
-        <br>
-        <p>- Elbin and Aleena</p>
+      "StoryTellers made our wedding day perfect. Everything was organized elegantly, and we were very happy."
+      <br><br>
+      <p>- Elbin and Aleena</p>
     </div>
-    <div id="review2" class="d-inline-block ">
-      "We hired StoryTellers for our Corporate Event and really these people are professionals in organizing any event, they organized and management our corporate events
-        o nicely and it was a themed event still it was done so perfectly that no one had any complains and everything was so luxurious and looked perfect, right form the 
-        start till the end things went smoothly and everyone was happy with the event."
-        <br>
-        <br>
-        <p>- Muhammed and Sarah</p>
+    <div id="review2" class="d-inline-block">
+      "StoryTellers professionally organized our corporate event. Everything looked perfect and went smoothly."
+      <br><br>
+      <p>- Muhammed and Sarah</p>
     </div>
+    <div id="review3" class="d-inline-block">
+      "For our child's tenth birthday, StoryTellers provided great ideas and executed them perfectly."
+      <br><br>
+      <p>- Fathima Khalid</p>
     </div>
-    <div id="review3" class="d-inline-block ">
-      "It was our child’s tenth birthday and we wanted to plan a themed birthday party in Dubai but had less ideas about it as we had never tried any themed birthday 
-        party but had heard about it, so we went on Google to find a birthday planner in Dubai and got StoryTellers and really, they helped us in everything right 
-        from giving ideas in the start to implementing it perfectly on the birthday was done smoothly."
-        <br>
-        <br>
-        <p>- Fathima khalid</p>
+    <div id="review4" class="d-inline-block">
+      "Our engagement party was a dream come true, thanks to the meticulous planning by StoryTellers."
+      <br><br>
+      <p>- James and Lily</p>
+    </div>
+    <div id="review5" class="d-inline-block">
+      "The themed party was a hit! StoryTellers managed everything flawlessly from start to finish."
+      <br><br>
+      <p>- Aisha and Omar</p>
     </div>
   </div>
+  </div>
+</div>
   <div class= "bg-dark text-light" id="Contact">
     <h1 class="mb-5 text-center">Contact Us</h1>
     <div id="contact-whole">
@@ -366,6 +365,45 @@ Email.send({
 message => alert("Message send successfully")
 );
 }
+document.addEventListener('DOMContentLoaded', function() {
+      const figures = document.querySelectorAll('.figure');
+      let showFirstSetImages = true;
+
+      setInterval(() => {
+        figures.forEach((figure, index) => {
+          const img = figure.querySelector('img');
+          const paragraph = figure.querySelector('.inside-figure');
+
+          if (showFirstSetImages) {
+            if ([0, 2, 4].includes(index)) {
+              img.classList.remove('hidden');
+              img.classList.add('visible');
+              paragraph.classList.remove('visible');
+              paragraph.classList.add('hidden');
+            } else {
+              img.classList.remove('visible');
+              img.classList.add('hidden');
+              paragraph.classList.remove('hidden');
+              paragraph.classList.add('visible');
+            }
+          } else {
+            if ([0, 2, 4].includes(index)) {
+              img.classList.remove('visible');
+              img.classList.add('hidden');
+              paragraph.classList.remove('hidden');
+              paragraph.classList.add('visible');
+            } else {
+              img.classList.remove('hidden');
+              img.classList.add('visible');
+              paragraph.classList.remove('visible');
+              paragraph.classList.add('hidden');
+            }
+          }
+        });
+
+        showFirstSetImages = !showFirstSetImages;
+      }, 5000);
+    });
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

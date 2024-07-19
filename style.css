@@ -139,16 +139,14 @@ th:last-child, td:last-child {
 }
 
 figure img{
-    width:5rem;
-    height:2rem;
+    width:8rem;
+    height:5rem;
 }
 
 #caption{
     color: azure; 
 }
-.inside-figure{
-    display: none;
-}
+
 
 .inside-figure{
     padding-top: 10px;
@@ -156,17 +154,6 @@ figure img{
     color: whitesmoke;
 }
 
-.figure:hover figure{
-    background-color: aliceblue;
-}
-
-.figure:hover .inside-figure {
-    display: block;
-    text-wrap: wrap;
-  }
-  .figure:hover img{
-    display: none;
-  }
 
 #slider1{
     margin-left: auto;
@@ -177,12 +164,26 @@ button.btn{
     width:15rem;
 }
 
-.review{
-   display: inline;
+#Reviews{
+    height:50vh;
 }
 
-#review1,#review2,#review3{
-    height:23rem;
+.review-container{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+.review{
+    display: flex;
+      flex-wrap: nowrap; 
+      align-items: center;
+      overflow: hidden;
+    }
+
+
+#review1,#review2,#review3,#review4,#review5{
+    height:10rem;
     width:20rem;
     padding-top: 2rem;
     background-color: beige;
@@ -193,6 +194,11 @@ button.btn{
     flex: 0 0 auto; 
     padding: 0 20px; 
     animation: slideLeft 8s linear infinite;
+    margin-left: 1rem;
+}
+
+#review4,#review5{
+    margin-left:8rem !important ;
 }
 
 
@@ -264,13 +270,13 @@ p{
 
   @keyframes pulse {
     0% {
-        transform: scale(1);
+        transform: scale(.5);
     }
     50% {
-        transform: scale(1.5);
+        transform: scale(1);
     }
     100% {
-        transform: scale(1);
+        transform: scale(.5);
     }
 }
 .zoom-out {
@@ -279,7 +285,7 @@ p{
 }
 
 
-@media(max-width:1024px){
+@media(max-width:1028px){
     .console-container{
         width:100%;
     }
@@ -295,8 +301,8 @@ p{
         font-size: 2rem;
         margin-top:1rem;
     }
-    #review1,#review2,#review3{ 
-        animation-play-state: paused;
+    #Reviews{
+        height:30vh;
     }
     #About-whole-mobile{
         display: block !important;
@@ -354,6 +360,9 @@ p{
         width:40%;
         margin-left: 30%;
     }
+    #Reviews{
+        height:40vh;
+    }
     #slider1{
         width:100% !important;
         height:75% !important;
@@ -369,12 +378,24 @@ p{
         font-size: 4rem;
         width:100%;
     }
-    #review1,#review2,#review3{ 
-        animation-play-state: paused;
-    }
     #contact-whole{
         display: block;
+    }
+    .inside-figure{
+        display: none;
     }
     
   }
 
+
+  .figure img, .inside-figure {
+    transition: opacity 1s ease-in-out;
+  }
+  .hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .visible {
+    opacity: 1;
+    visibility: visible;
+  }
